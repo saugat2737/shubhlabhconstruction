@@ -512,10 +512,48 @@
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .copyright {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .developer-credit {
+            flex: 1;
             text-align: center;
             color: #bdc3c7;
             font-size: 14px;
         }
+
+        .developer-credit a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .developer-credit a:hover {
+            color: white;
+        }
+
+        .map-container {
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            background: #34495e;
+        }
+
 
         /* Animations */
         @keyframes fadeIn {
@@ -860,65 +898,101 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Shubh Labh Construction</h3>
-                    <p style="color: #bdc3c7; margin-bottom: 20px;">Building excellence with integrity and innovation since 2005. Your trusted construction partner in Biratnagar and throughout Nepal.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                        <a href="mailto:santoshbhagat8555@gmail.com"><i class="fab fa-email"></i></a>
-                        
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="galary.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Koshi Project, Biratnagar-13, Province 1, Nepal</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+977 9827374822, +977 9852031985</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span><a href="mailto:santoshbhagat8555@gmail.com">santoshbhagat8555@gmail.com</a></span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Office Location</h3>
-                    <div class="map-container">
-                        <div style="color: white; text-align: center; padding: 20px;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
-                            <p>Biratnagar,Nepal</p>
-                        </div>
-                    </div>
+     <footer>
+    <div class="container">
+        <div class="footer-content">
+
+            <div class="footer-col">
+                <h3>Shubh Labh Construction</h3>
+                <p style="color: #bdc3c7; margin-bottom: 20px;">
+                    Building excellence with integrity and innovation since 2005.
+                    Your trusted construction partner in Biratnagar and throughout Nepal.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="mailto:santoshbhagat8555@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 Shubh Labh Construction. All Rights Reserved.</p>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="galary.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Koshi Project, Biratnagar-13, Province 1, Nepal</span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+977 9852031985</span>
+                    </li>
+
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>
+                            <a href="mailto:santoshbhagat8555@gmail.com">
+                                santoshbhagat8555@gmail.com
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Office Location</h3>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Biratnagar%2056613,%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+
+                <div class="copyright">
+                    <p>&copy; 2025 Shubh Labh Construction. All Rights Reserved.</p>
+                </div>
+
+                <div class="developer-credit">
+                    <p>
+                        Built with ❤️ by
+                        <a href="https://www.birattech.com" target="_blank">
+                            BiratTech
+                        </a>
+                    </p>
+                </div>
+
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script>
         // Mobile Menu Toggle

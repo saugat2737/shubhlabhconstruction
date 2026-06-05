@@ -390,6 +390,22 @@
             color: var(--primary-dark);
         }
 
+        .project-summary {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .project-summary.show {
+            max-height: 400px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+
         /* Stats Section */
         .stats-section {
             background: linear-gradient(to right, var(--secondary), #1a2530);
@@ -612,10 +628,48 @@
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .copyright {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .developer-credit {
+            flex: 1;
             text-align: center;
             color: #bdc3c7;
             font-size: 14px;
         }
+
+        .developer-credit a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .developer-credit a:hover {
+            color: white;
+        }
+
+        .map-container {
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            background: #34495e;
+        }
+
 
         /* Animations */
         @keyframes fadeIn {
@@ -803,17 +857,45 @@
                 <!-- Project 1 -->
                 <div class="project-card" data-category="government">
                     <div class="project-img">
-                        <img src="./img/5.jpg" alt="Modern Apartment Complex">
+                        <img src="./img/5.jpg" alt="Baijanathpur Hospital">
                         <span class="project-category">Government</span>
                     </div>
+
                     <div class="project-content">
                         <h3>Baijanathpur Hospital Work</h3>
+
                         <div class="project-meta">
-                            <div><i class="fas fa-map-marker-alt"></i> Biratnagar-19</div>
-                            <div><i class="fas fa-calendar-alt"></i> 2025</div>
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                Biratnagar-19
+                            </div>
+
+                            <div>
+                                <i class="fas fa-calendar-alt"></i>
+                                2025
+                            </div>
                         </div>
-                        <p>Modern Hospital with premium amenities and sustainable design features.</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+
+                        <p>
+                            Modern hospital construction with quality infrastructure,
+                            finishing works, and sustainable development features.
+                        </p>
+
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <!-- Hidden Summary -->
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar-19</li>
+                                <li><strong>Completion Year:</strong> 2025</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Hospital Construction & Finishing Works</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -824,14 +906,26 @@
                         <span class="project-category">Government</span>
                     </div>
                     <div class="project-content">
-                        <h3>Retaling Wall Work</h3>
+                        <h3>Retaining Wall Work</h3>
                         <div class="project-meta">
                             <div><i class="fas fa-map-marker-alt"></i> Biratnagar</div>
                             <div><i class="fas fa-calendar-alt"></i> 2025</div>
                         </div>
-                        <p>Construction of Retaling wall along with gravel work.</p>
+                        <p>Construction of Retaining Wall along with gravel work.</p>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
 
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2025</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Retaining Wall Construction & Gravel Work</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -847,9 +941,23 @@
                             <div><i class="fas fa-map-marker-alt"></i> Biratnagar-13</div>
                             <div><i class="fas fa-calendar-alt"></i> 2024</div>
                         </div>
-                        <p>Government  building with modern facilities and earthquake-resistant design.To take the covid test of tourist visiting form jogbani boarder. 
+                        <p>Government building with modern facilities and earthquake-resistant design.To take the covid
+                            test of tourist visiting form jogbani boarder.
                         </p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal & Save The Children</li>
+                                <li><strong>Location:</strong> Biratnagar-13</li>
+                                <li><strong>Completion Year:</strong> 2024</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Vaccination Center Construction & Finishing Works</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -867,7 +975,20 @@
                             <div><i class="fas fa-calendar-alt"></i> 2025</div>
                         </div>
                         <p>300m Drain connecting rural communities with RCC Road.</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2025</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> RCC Drain Construction</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -885,7 +1006,20 @@
                             <div><i class="fas fa-calendar-alt"></i> 2025</div>
                         </div>
                         <p>High Quality truss with painting work</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2025</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Steel Truss Fabrication, Installation & Painting</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -903,7 +1037,20 @@
                             <div><i class="fas fa-calendar-alt"></i> 2023</div>
                         </div>
                         <p>Boundary work along with construction of truss and parking lot.</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2023</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Boundary Wall, Truss Work & Parking Area Development</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -919,8 +1066,22 @@
                             <div><i class="fas fa-map-marker-alt"></i> Biratnagar</div>
                             <div><i class="fas fa-calendar-alt"></i> 2025</div>
                         </div>
-                        <p>Construction of RCC road along with footpath at rular area of biratnagar to be connected with urban area.</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <p>Construction of RCC road along with footpath at rular area of biratnagar to be connected with
+                            urban area.</p>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2025</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> RCC Road & Footpath Construction</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -938,7 +1099,20 @@
                             <div><i class="fas fa-calendar-alt"></i> 2024</div>
                         </div>
                         <p>For social work to keep small chail for certain time .</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Government of Nepal</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2024</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Social Welfare Facility Construction</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card" data-category="government">
@@ -954,7 +1128,20 @@
                             <div><i class="fas fa-calendar-alt"></i> 2019</div>
                         </div>
                         <p>Renovation work at city branch of Nepal Bank Limited</p>
-                        <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                        <!-- View Details Button -->
+                        <a href="#" class="project-link">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <div class="project-summary">
+                            <ul>
+                                <li><strong>Client:</strong> Nepal Bank Limited</li>
+                                <li><strong>Location:</strong> Biratnagar</li>
+                                <li><strong>Completion Year:</strong> 2019</li>
+                                <li><strong>Status:</strong> ✅ Successfully Completed</li>
+                                <li><strong>Scope:</strong> Renovation & Interior Improvement Works</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1034,15 +1221,22 @@
     <footer>
         <div class="container">
             <div class="footer-content">
+
                 <div class="footer-col">
                     <h3>Shubh Labh Construction</h3>
-                    <p style="color: #bdc3c7; margin-bottom: 20px;">Building excellence with integrity and innovation
-                        since 2005. Your trusted construction partner in Biratnagar and throughout Nepal.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="mailto:santoshbhagat8555@gmail.com"><i class="fab fa-email"></i></a>
+                    <p style="color: #bdc3c7; margin-bottom: 20px;">
+                        Building excellence with integrity and innovation since 2005.
+                        Your trusted construction partner in Biratnagar and throughout Nepal.
+                    </p>
 
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="mailto:santoshbhagat8555@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -1050,12 +1244,11 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="Vacancy.html">Vacancy</a></li>
-                        <li><a href="services.html" class="active">Services</a></li>
-                        <li><a href="galary.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
+                        <li><a href="galary.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -1066,30 +1259,53 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Koshi Project, Biratnagar-13, Province 1, Nepal</span>
                         </li>
+
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+977 9827374822, +977 9852031985</span>
+                            <span>+977 9852031985</span>
                         </li>
+
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span><a href="mailto:santoshbhagat8555@gmail.com">santoshbhagat8555@gmail.com</a></span>
+                            <span>
+                                <a href="mailto:santoshbhagat8555@gmail.com">
+                                    santoshbhagat8555@gmail.com
+                                </a>
+                            </span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Office Location</h3>
+
                     <div class="map-container">
-                        <div style="color: white; text-align: center; padding: 20px;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
-                            <p>Biratnagar,Nepal</p>
-                        </div>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Biratnagar%2056613,%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
+
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2023 Shubh Labh Construction. All Rights Reserved.</p>
+                <div class="footer-bottom-content">
+
+                    <div class="copyright">
+                        <p>&copy; 2025 Shubh Labh Construction. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="developer-credit">
+                        <p>
+                            Built with ❤️ by
+                            <a href="https://www.birattech.com" target="_blank">
+                                BiratTech
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </footer>
@@ -1166,6 +1382,37 @@
         // Observe sections
         document.querySelectorAll('.section, .projects-hero').forEach(section => {
             observer.observe(section);
+        });
+        // Project Details Toggle
+        document.querySelectorAll('.project-link').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                const currentSummary =
+                    this.parentElement.querySelector('.project-summary');
+
+                const isOpen =
+                    currentSummary.classList.contains('show');
+
+                document.querySelectorAll('.project-summary').forEach(summary => {
+                    summary.classList.remove('show');
+                });
+
+                document.querySelectorAll('.project-link').forEach(btn => {
+                    btn.innerHTML =
+                        'View Details <i class="fas fa-arrow-right"></i>';
+                });
+
+                if (!isOpen) {
+                    currentSummary.classList.add('show');
+
+                    this.innerHTML =
+                        'Hide Details <i class="fas fa-arrow-up"></i>';
+                }
+            });
+
         });
     </script>
 </body>

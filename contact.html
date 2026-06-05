@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Shubh Labh Construction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="./img/logo2.jpg" type="image/x-icon">
     <style>
         /* CSS Reset & Variables */
@@ -38,7 +41,11 @@
             background-color: var(--light-gray);
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             line-height: 1.3;
@@ -365,7 +372,8 @@
             color: var(--secondary);
         }
 
-        .contact-text p, .contact-text a {
+        .contact-text p,
+        .contact-text a {
             color: var(--gray);
             text-decoration: none;
             transition: var(--transition);
@@ -523,7 +531,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
             transform: rotate(30deg);
         }
 
@@ -570,38 +578,53 @@
 
         /* Testimonials */
         .testimonials-section {
-            background-color: #f8f9fa;
+            background: #f8f9fa;
         }
 
-        .testimonials-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .testimonial-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin: 20px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
             position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--primary);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
         .testimonial-card::before {
-            content: '"';
+            content: "❝";
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 15px;
+            right: 20px;
             font-size: 80px;
-            font-family: serif;
-            color: rgba(230, 126, 34, 0.1);
+            color: rgba(230, 126, 34, 0.08);
             line-height: 1;
         }
 
-        .testimonial-content {
+        .stars {
+            color: #f39c12;
             font-size: 18px;
-            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-content {
             color: var(--secondary);
+            font-size: 16px;
+            line-height: 1.8;
             margin-bottom: 25px;
         }
 
@@ -611,49 +634,33 @@
         }
 
         .author-img {
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
-            overflow: hidden;
+            background: linear-gradient(135deg,
+                    var(--primary),
+                    var(--primary-dark));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 22px;
             margin-right: 15px;
-            border: 3px solid var(--primary);
-        }
-
-        .author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.25);
         }
 
         .author-info h4 {
             color: var(--secondary);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 17px;
         }
 
         .author-info p {
             color: var(--primary);
+            font-size: 14px;
             font-weight: 500;
-        }
-
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .testimonial-dot.active {
-            background: var(--primary);
-            transform: scale(1.2);
         }
 
         /* FAQ Section */
@@ -706,7 +713,7 @@
             background: white;
         }
 
-        .faq-question.active + .faq-answer {
+        .faq-question.active+.faq-answer {
             padding: 20px 25px;
             max-height: 500px;
         }
@@ -720,8 +727,8 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 50px;
             margin-bottom: 50px;
         }
 
@@ -744,6 +751,8 @@
 
         .footer-col ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         .footer-col ul li {
@@ -753,44 +762,65 @@
         .footer-col ul li a {
             color: #bdc3c7;
             text-decoration: none;
-            transition: var(--transition);
-            display: block;
+            transition: 0.3s ease;
+            display: inline-block;
         }
 
         .footer-col ul li a:hover {
             color: var(--primary);
-            padding-left: 5px;
+            transform: translateX(5px);
         }
 
-        .contact-info li {
+        /* Footer Contact Info */
+        .footer-contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact-info li {
             display: flex;
-            margin-bottom: 20px;
             align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 18px;
         }
 
-        .contact-info i {
+        .footer-contact-info i {
             color: var(--primary);
-            margin-right: 15px;
-            font-size: 18px;
             min-width: 20px;
+            font-size: 18px;
+            margin-top: 3px;
         }
 
+        .footer-contact-info span,
+        .footer-contact-info a {
+            color: #bdc3c7;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-contact-info a:hover {
+            color: var(--primary);
+        }
+
+        /* Social Icons */
         .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
         .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: 0.3s ease;
         }
 
         .social-links a:hover {
@@ -798,30 +828,72 @@
             transform: translateY(-5px);
         }
 
-        .map-container {
-            height: 200px;
-            border-radius: 8px;
+        /* Footer Map */
+        .footer-map {
+            height: 220px;
+            border-radius: 10px;
             overflow: hidden;
-            margin-top: 20px;
-            background: #34495e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
         }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer Bottom */
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
             padding-top: 20px;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .copyright {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .developer-credit {
+            flex: 1;
             text-align: center;
             color: #bdc3c7;
             font-size: 14px;
         }
 
+        .developer-credit a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .developer-credit a:hover {
+            color: white;
+        }
+
+
+
 
         /* Animations */
+        /* ================= ANIMATIONS ================= */
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes fadeInDown {
@@ -829,6 +901,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -840,45 +913,54 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Responsive Design */
+        /* ================= RESPONSIVE DESIGN ================= */
+
         @media (max-width: 992px) {
+
             .section {
                 padding: 70px 0;
             }
-            
+
             .contact-hero {
                 height: 55vh;
             }
-            
+
             .contact-hero h1 {
                 font-size: 42px;
             }
-            
+
             .map-container {
                 height: 400px;
             }
-            
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
             .section-title h2 {
                 font-size: 32px;
             }
         }
 
         @media (max-width: 768px) {
+
             .mobile-menu {
                 display: block;
             }
-            
+
             nav ul {
                 position: fixed;
                 top: 80px;
                 left: -100%;
-                background: white;
+                background: #fff;
                 width: 100%;
                 flex-direction: column;
                 align-items: center;
@@ -887,81 +969,113 @@
                 transition: var(--transition);
                 z-index: 999;
             }
-            
+
             nav ul.active {
                 left: 0;
             }
-            
+
             nav ul li {
                 margin: 15px 0;
             }
-            
+
             .section-title h2 {
                 font-size: 28px;
             }
-            
+
             .contact-container {
                 grid-template-columns: 1fr;
             }
-            
+
             .map-container {
                 height: 350px;
             }
-            
+
             .testimonial-card {
                 padding: 30px 20px;
+            }
+
+            /* Footer */
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .developer-credit {
+                text-align: center;
+            }
+
+            .footer-map {
+                height: 250px;
             }
         }
 
         @media (max-width: 480px) {
+
             .section {
                 padding: 50px 0;
             }
-            
+
             .btn {
                 padding: 12px 24px;
                 font-size: 15px;
             }
-            
+
             .logo-img {
                 padding: 8px 15px;
             }
-            
+
             .logo-line1 {
                 font-size: 20px;
             }
-            
+
             .logo-line2 {
                 font-size: 11px;
             }
-            
+
             .contact-hero {
                 height: 45vh;
                 margin-top: 70px;
             }
-            
+
             .contact-hero h1 {
                 font-size: 32px;
             }
-            
+
             .contact-hero p {
                 font-size: 16px;
             }
-            
-            .contact-info, .contact-form {
+
+            .contact-info,
+            .contact-form {
                 padding: 30px 20px;
             }
-            
+
             .map-container {
                 height: 300px;
             }
-            
+
             .day-card {
                 padding: 25px 20px;
+            }
+
+            .footer-map {
+                height: 220px;
+            }
+
+            .copyright,
+            .developer-credit {
+                font-size: 13px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -977,7 +1091,7 @@
             </div>
             <nav>
                 <ul>
-                 <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="Vacancy.html">Vacancy</a></li>
@@ -1005,7 +1119,7 @@
                 <h2>Contact Our Team</h2>
                 <p>Reach out to us for inquiries, quotes, or to schedule a consultation</p>
             </div>
-            
+
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
@@ -1019,7 +1133,7 @@
                                 <p>Koshi Project, Biratnagar-13, Province 1, Nepal</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone-alt"></i>
@@ -1032,7 +1146,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
@@ -1046,7 +1160,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="social-contact">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1055,49 +1169,64 @@
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form" id="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="#" method="POST">
+
+                    <form action="https://formspree.io/f/xeewodvv" method="POST">
+
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" id="phone" name="phone" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" class="form-control" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Your Message</label>
                             <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
+
+                        <!-- Email Subject -->
+                        <input type="hidden" name="_subject"
+                            value="New Contact Form Submission - Shubh Labh Construction">
+
+                        <!-- Redirect after submit -->
+                        <input type="hidden" name="_next" value="https://shubhlabhconstruction.com.np/thankyou.html">
+
+                        <button type="submit" class="btn">
+                            Send Message
+                        </button>
+
                     </form>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <!-- <section class="map-section">
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.234567890123!2d87.267352!3d26.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI3JzI0LjQiTiA4N8KwMTYnMDIuNSJF!5e0!3m2!1sen!2snp!4v1234567890123!5m2!1sen!2snp" allowfullscreen="" loading="lazy"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.234567890123!2d87.267352!3d26.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI3JzI0LjQiTiA4N8KwMTYnMDIuNSJF!5e0!3m2!1sen!2snp!4v1234567890123!5m2!1sen!2snp"
+                allowfullscreen="" loading="lazy"></iframe>
             <div class="map-overlay"></div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Working Hours Section -->
     <section class="section hours-section">
@@ -1106,23 +1235,23 @@
                 <h2>Working Hours</h2>
                 <p>Our team is available during these hours to assist you</p>
             </div>
-            
+
             <div class="hours-grid">
                 <div class="day-card">
                     <h4>Monday - Friday</h4>
                     <p>8:00 AM - 6:00 PM</p>
                 </div>
-                
+
                 <div class="day-card">
                     <h4>Saturday</h4>
                     <p>9:00 AM - 4:00 PM</p>
                 </div>
-                
+
                 <div class="day-card">
                     <h4>Sunday</h4>
                     <p>Emergency Only</p>
                 </div>
-                
+
                 <div class="day-card">
                     <h4>24/7 Support</h4>
                     <p>+977 9852031985</p>
@@ -1134,36 +1263,76 @@
     <!-- Testimonials Section -->
     <section class="section testimonials-section">
         <div class="container">
+
             <div class="section-title">
                 <h2>What Our Clients Say</h2>
-                <p>Hear from our satisfied clients about their experience with us</p>
+                <p>Trusted by homeowners, businesses, and organizations across Nepal</p>
             </div>
-            
-            <div class="testimonials-container">
+
+            <div class="testimonials-grid">
+
+                <!-- Review 1 -->
                 <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+
                     <div class="testimonial-content">
-                        Shubh Labh Construction delivered exceptional results on our commercial building project. Their attention to detail and commitment to deadlines was impressive. Highly recommended for any construction needs in Biratnagar.
+                        Shubh Labh Construction completed our residential house in Biratnagar on time and within budget.
+                        Their team maintained quality throughout the project and kept us informed at every stage.
                     </div>
+
                     <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                        </div>
+                        <div class="author-img">RS</div>
+
                         <div class="author-info">
                             <h4>Rajesh Sharma</h4>
-                            <p>Commercial Property Owner</p>
+                            <p>Homeowner, Biratnagar</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-nav">
-                    <div class="testimonial-dot active"></div>
-                    <div class="testimonial-dot"></div>
-                    <div class="testimonial-dot"></div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+
+                    <div class="testimonial-content">
+                        We hired Shubh Labh Construction for our commercial building project.
+                        Their professionalism, workmanship, and commitment to deadlines exceeded our expectations.
+                    </div>
+
+                    <div class="testimonial-author">
+                        <div class="author-img">MG</div>
+
+                        <div class="author-info">
+                            <h4>Manoj Gupta</h4>
+                            <p>Business Owner, Morang</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+
+                    <div class="testimonial-content">
+                        The team delivered excellent construction quality and provided valuable suggestions during
+                        planning.
+                        We are extremely satisfied with the final result and would gladly recommend them.
+                    </div>
+
+                    <div class="testimonial-author">
+                        <div class="author-img">SD</div>
+
+                        <div class="author-info">
+                            <h4>Sunita Devi</h4>
+                            <p>Property Owner, Sunsari</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="section faq-section">
         <div class="container">
@@ -1171,7 +1340,7 @@
                 <h2>Frequently Asked Questions</h2>
                 <p>Find answers to common questions about our services</p>
             </div>
-            
+
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
@@ -1179,37 +1348,44 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        We specialize in a wide range of construction projects including residential buildings, commercial complexes, industrial facilities, infrastructure projects, and renovation work. Our expertise covers all phases from design to completion.
+                        We specialize in a wide range of construction projects including residential buildings,
+                        commercial complexes, industrial facilities, infrastructure projects, and renovation work. Our
+                        expertise covers all phases from design to completion.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         How long does a typical residential construction project take?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        The duration depends on the size and complexity of the project. A standard family home typically takes 6-9 months from groundbreaking to completion. We provide a detailed timeline during our initial consultation.
+                        The duration depends on the size and complexity of the project. A standard family home typically
+                        takes 6-9 months from groundbreaking to completion. We provide a detailed timeline during our
+                        initial consultation.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         Do you provide free consultations and estimates?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we offer free initial consultations and project estimates. Contact us to schedule a meeting where we can discuss your requirements and provide a preliminary cost estimate.
+                        Yes, we offer free initial consultations and project estimates. Contact us to schedule a meeting
+                        where we can discuss your requirements and provide a preliminary cost estimate.
                     </div>
                 </div>
-                
+
                 <div class="faq-item">
                     <div class="faq-question">
                         What safety measures do you implement on construction sites?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Safety is our top priority. We implement comprehensive safety protocols including regular safety training, proper protective equipment, site security measures, daily safety inspections, and compliance with all local safety regulations.
+                        Safety is our top priority. We implement comprehensive safety protocols including regular safety
+                        training, proper protective equipment, site security measures, daily safety inspections, and
+                        compliance with all local safety regulations.
                     </div>
                 </div>
             </div>
@@ -1219,62 +1395,114 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+
             <div class="footer-content">
+
+                <!-- Company Info -->
                 <div class="footer-col">
                     <h3>Shubh Labh Construction</h3>
-                    <p style="color: #bdc3c7; margin-bottom: 20px;">Building excellence with integrity and innovation since 2005. Your trusted construction partner in Biratnagar and throughout Nepal.</p>
+
+                    <p style="color:#bdc3c7; margin-bottom:20px;">
+                        Building excellence with integrity and innovation since 2005.
+                        Your trusted construction partner in Biratnagar and throughout Nepal.
+                    </p>
+
                     <div class="social-links">
-                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                        <a href="mailto:santoshbhagat8555@gmail.com"><i class="fab fa-email"></i></a>
-                        
+                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="mailto:santoshbhagat8555@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                
+
+                <!-- Quick Links -->
                 <div class="footer-col">
                     <h3>Quick Links</h3>
+
                     <ul>
-                       <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="Vacancy.html">Vacancy</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="galary.html">Gallery</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="galary.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Contact Details -->
                 <div class="footer-col">
                     <h3>Contact Us</h3>
-                    <ul class="contact-info">
+
+                    <ul class="footer-contact-info">
+
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Koshi Project, Biratnagar-13, Province 1, Nepal</span>
+                            <span>
+                                Koshi Project, Biratnagar-13,
+                                Province 1, Nepal
+                            </span>
                         </li>
+
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+977 9827374822, +977 9852031985</span>
+                            <span>
+                                +977 9852031985
+                            </span>
                         </li>
+
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span><a href="mailto:santoshbhagat8555@gmail.com">santoshbhagat8555@gmail.com</a></span>
+                            <span>
+                                <a href="mailto:santoshbhagat8555@gmail.com">
+                                    santoshbhagat8555@gmail.com
+                                </a>
+                            </span>
                         </li>
+
                     </ul>
                 </div>
-                
+
+                <!-- Map -->
                 <div class="footer-col">
                     <h3>Office Location</h3>
-                    <div class="map-container">
-                        <div style="color: white; text-align: center; padding: 20px;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
-                            <p>Biratnagar,Nepal</p>
-                        </div>
+
+                    <div class="footer-map">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Biratnagar%2056613,%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            allowfullscreen loading="lazy">
+                        </iframe>
                     </div>
                 </div>
+
             </div>
-            
+
+            <!-- Footer Bottom -->
+
             <div class="footer-bottom">
-                <p>&copy; 2023 Shubh Labh Construction. All Rights Reserved.</p>
+                <div class="footer-bottom-content">
+
+                    <div class="copyright">
+                        <p>
+                            &copy; 2025 Shubh Labh Construction.
+                            All Rights Reserved.
+                        </p>
+                    </div>
+
+                    <div class="developer-credit">
+                        <p>
+                            Built with ❤️ by
+                            <a href="https://www.birattech.com" target="_blank">
+                                BiratTech
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
+
         </div>
     </footer>
 
@@ -1283,13 +1511,13 @@
         const mobileMenu = document.querySelector('.mobile-menu');
         const navMenu = document.querySelector('nav ul');
         const navLinks = document.querySelectorAll('nav ul li a');
-        
+
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenu.querySelector('i').classList.toggle('fa-bars');
             mobileMenu.querySelector('i').classList.toggle('fa-times');
         });
-        
+
         // Close mobile menu when clicking a link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1298,7 +1526,7 @@
                 mobileMenu.querySelector('i').classList.remove('fa-times');
             });
         });
-        
+
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
@@ -1310,14 +1538,14 @@
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
         });
-        
+
         // Animation on scroll
         const observerOptions = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1325,52 +1553,30 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe sections
         document.querySelectorAll('.section, .contact-hero').forEach(section => {
             observer.observe(section);
         });
-        
-        // Form submission handling
-        const contactForm = document.querySelector('.contact-form form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show loading state
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalBtnText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    alert('Thank you for your message! We will contact you soon.');
-                    this.reset();
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                }, 1500);
-            });
-        }
-        
+
         // FAQ Accordion
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 const isActive = question.classList.contains('active');
-                
+
                 // Close all questions
                 faqQuestions.forEach(q => {
                     q.classList.remove('active');
                 });
-                
+
                 // Open clicked question if it wasn't active
                 if (!isActive) {
                     question.classList.add('active');
                 }
             });
         });
-        
+
         // Testimonial navigation
         const testimonialDots = document.querySelectorAll('.testimonial-dot');
         testimonialDots.forEach((dot, index) => {
@@ -1382,4 +1588,5 @@
         });
     </script>
 </body>
+
 </html>

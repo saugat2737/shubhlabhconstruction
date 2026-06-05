@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Shubh Labh Construction</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="./img/logo2.jpg" type="image/x-icon">
     <style>
         /* CSS Reset & Variables */
@@ -33,7 +36,11 @@
             background-color: #f5f5f5;
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             line-height: 1.2;
@@ -462,15 +469,58 @@
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .copyright {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .developer-credit {
+            flex: 1;
             text-align: center;
             color: #bdc3c7;
             font-size: 14px;
         }
 
+        .developer-credit a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .developer-credit a:hover {
+            color: white;
+        }
+
+        .map-container {
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            background: #34495e;
+        }
+
+
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes fadeInDown {
@@ -478,6 +528,7 @@
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -489,6 +540,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -500,7 +552,7 @@
             .section {
                 padding: 60px 0;
             }
-            
+
             .about-hero h1 {
                 font-size: 36px;
             }
@@ -510,7 +562,7 @@
             .mobile-menu {
                 display: block;
             }
-            
+
             nav ul {
                 position: fixed;
                 top: 80px;
@@ -523,15 +575,15 @@
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
                 transition: var(--transition);
             }
-            
+
             nav ul.active {
                 left: 0;
             }
-            
+
             nav ul li {
                 margin: 10px 0;
             }
-            
+
             .section-title h2 {
                 font-size: 30px;
             }
@@ -541,26 +593,27 @@
             .section {
                 padding: 40px 0;
             }
-            
+
             .btn {
                 padding: 10px 20px;
                 font-size: 14px;
             }
-            
+
             .logo-img {
                 padding: 5px 10px;
             }
-            
+
             .logo-line1 {
                 font-size: 18px;
             }
-            
+
             .logo-line2 {
                 font-size: 10px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -576,7 +629,7 @@
             </div>
             <nav>
                 <ul>
-                   <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="Vacancy.html">Vacancy</a></li>
@@ -601,24 +654,34 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Leadership</h2>
-                <p>Meet the visionaries behind Shubh Labh Construction</p>
+                <p>Meet the visionary behind Shubh Labh Construction</p>
             </div>
-            
+
             <div class="team-container">
+
                 <!-- Founder -->
                 <div class="team-member">
                     <div class="member-img">
-                        <img src="./img/founder.jpg" alt="Bibek Gupta">
+                        <img src="./img/founder.jpeg" alt="Santosh Bhagat">
                     </div>
+
                     <div class="member-info">
                         <h3>Santosh Bhagat</h3>
                         <span class="position">Founder & CEO</span>
-                        <p>With over 25 years of experience in construction management, Mr Santosh leads our company with vision and expertise.</p>
+
+                        <p>
+                            With over 25 years of experience in construction management,
+                            Mr. Santosh Bhagat leads our company with vision, expertise,
+                            and a commitment to delivering quality construction projects
+                            across Nepal.
+                        </p>
+
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <span>santoshbhagat8555@gmail.com</span>
                             </div>
+
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
                                 <span>+977 9852031985</span>
@@ -626,75 +689,29 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Website Developer -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="./img/webfounder.jpg" alt="Saugat Rauniyar">
-                    </div>
-                    <div class="member-info">
-                        <h3>Saugat Rauniyar</h3>
-                        <span class="position">Website Developer</span>
-                        <p>Creative developer who transformed our digital presence with this modern, responsive website that showcases our work.</p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>saugat.rauniyar.work@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+977 9827374822</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-github"></i>
-                                <span>github.com/sausin123</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Website Maintenance -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="./img/sugam.jpg" alt="Sugam Rauniyar">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sugam Rauniyar</h3>
-                        <span class="position">Website Maintenance & Tester</span>
-                        <p>Web developers must check their websites regularly to catch errors early and evaluate code for possible issues.</p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>sugam.rauniyar.work@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+977 9812343362</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-github"></i>
-                                <span>github.com/sugamrauniyar</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
-
     <!-- History Section -->
     <section class="section history-section">
         <div class="container">
             <div class="section-title">
                 <h2>Our History</h2>
             </div>
-            
+
             <div class="history-container">
-                <p>Founded in 2005 by Santosh Bhagat, Shubh Labh Construction began as a small team of passionate engineers with a vision to transform Nepal's infrastructure landscape. Starting with just 5 employees, we've grown into a respected construction firm with over 150 skilled professionals.</p>
-                <p>Our journey has been marked by significant milestones - from our first municipal project in Biratnagar to large-scale infrastructure developments across Province 1. We've built lasting relationships with clients through our commitment to quality, safety, and innovation.</p>
-                <p>Today, Shubh Labh Construction stands as a symbol of excellence in Nepal's construction industry, with a portfolio of over 200 successfully completed projects and a reputation for delivering beyond expectations.</p>
+                <p>Founded in 2005 by Santosh Bhagat, Shubh Labh Construction began as a small team of passionate
+                    engineers with a vision to transform Nepal's infrastructure landscape. Starting with just 5
+                    employees, we've grown into a respected construction firm with over 150 skilled professionals.</p>
+                <p>Our journey has been marked by significant milestones - from our first municipal project in
+                    Biratnagar to large-scale infrastructure developments across Province 1. We've built lasting
+                    relationships with clients through our commitment to quality, safety, and innovation.</p>
+                <p>Today, Shubh Labh Construction stands as a symbol of excellence in Nepal's construction industry,
+                    with a portfolio of over 200 successfully completed projects and a reputation for delivering beyond
+                    expectations.</p>
             </div>
-            
+
             <div class="milestones">
                 <div class="milestone">
                     <i class="fas fa-calendar-alt"></i>
@@ -721,32 +738,40 @@
     </section>
 
     <!-- Footer -->
-   <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
+
                 <div class="footer-col">
                     <h3>Shubh Labh Construction</h3>
-                    <p style="color: #bdc3c7; margin-bottom: 20px;">Building excellence with integrity and innovation since 2005. Your trusted construction partner in Biratnagar and throughout Nepal.</p>
+                    <p style="color: #bdc3c7; margin-bottom: 20px;">
+                        Building excellence with integrity and innovation since 2005.
+                        Your trusted construction partner in Biratnagar and throughout Nepal.
+                    </p>
+
                     <div class="social-links">
-                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                        <a href="mailto:santoshbhagat8555@gmail.com"><i class="fab fa-email"></i></a>
-                        
+                        <a href="https://www.facebook.com/santoshbhagat85?mibextid=ZbWKwL" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="mailto:santoshbhagat8555@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="Vacancy.html">Vacancy</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="galary.html">Gallery</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="galary.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="contact-info">
@@ -754,30 +779,53 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Koshi Project, Biratnagar-13, Province 1, Nepal</span>
                         </li>
+
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+977 9827374822, +977 9852031985</span>
+                            <span>+977 9852031985</span>
                         </li>
+
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span><a href="mailto:santoshbhagat8555@gmail.com">santoshbhagat8555@gmail.com</a></span>
+                            <span>
+                                <a href="mailto:santoshbhagat8555@gmail.com">
+                                    santoshbhagat8555@gmail.com
+                                </a>
+                            </span>
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Office Location</h3>
+
                     <div class="map-container">
-                        <div style="color: white; text-align: center; padding: 20px;">
-                            <i class="fas fa-map-marked-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
-                            <p>Biratnagar,Nepal</p>
-                        </div>
+                        <iframe
+                            src="https://maps.google.com/maps?q=Biratnagar%2056613,%20Nepal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
                     </div>
                 </div>
+
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2023 Shubh Labh Construction. All Rights Reserved.</p>
+                <div class="footer-bottom-content">
+
+                    <div class="copyright">
+                        <p>&copy; 2025 Shubh Labh Construction. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="developer-credit">
+                        <p>
+                            Built with ❤️ by
+                            <a href="https://www.birattech.com" target="_blank">
+                                BiratTech
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </div>
     </footer>
@@ -786,13 +834,13 @@
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navMenu = document.querySelector('nav ul');
-        
+
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenu.querySelector('i').classList.toggle('fa-bars');
             mobileMenu.querySelector('i').classList.toggle('fa-times');
         });
-        
+
         // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
@@ -804,14 +852,14 @@
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
         });
-        
+
         // Simple animation on scroll
         const observerOptions = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -819,11 +867,12 @@
                 }
             });
         }, observerOptions);
-        
+
         // Observe sections
         document.querySelectorAll('.section, .about-hero').forEach(section => {
             observer.observe(section);
         });
     </script>
 </body>
+
 </html>
